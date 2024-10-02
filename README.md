@@ -6,7 +6,7 @@
 #### Санкт-Петербург 2024 г.
 
 
-**Задание:** Модифицировать файл script.bash так, чтобы при его запуске в терминале в виде `bash script.bash Vasya Pupkin` Вывод был `Welcome, Vasya Pupkin`
+## Задание: Модифицировать файл script.bash так, чтобы при его запуске в терминале в виде `bash script.bash Vasya Pupkin` Вывод был `Welcome, Vasya Pupkin`
 
 
 Открываем терминал с помощью горячих клавиш Cntr Alt T.
