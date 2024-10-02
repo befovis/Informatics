@@ -9,22 +9,22 @@
 
 
 Открываем терминал с помощью горячих клавиш Cntr Alt T.
-![im1](https://drive.google.com/file/d/1knimNS75a5G2lMpwb6qOg60975jEGrbI/view?usp=sharing)
+![im1](https://github.com/befovis/Infa/blob/2cd9e07f7f306b64f7144a10c64ae3d79a3c7ba5/im1.png)
 
 В терминале пишем команду touch для создания файла с названием будущего файла script.bash.
 
 Следующим шагом устанавливаем команду `gedit` с помощью команды `sudo apt install gedit`.
-![im12]([https://github.com/befovis/Infa/blob/main/im2.png](https://drive.google.com/file/d/1oT4A8ToLiYSxle3VG-kir2hxN-nXvE8P/view?usp=sharing))
+![im12](https://github.com/befovis/Infa/blob/a17e7a29b0d245164f3df19b87c36d6aa64ea5cb/im2.png)
 
 Теперь используя команду gedit открываем нужный файл для редактирования.
-![im3]([https://github.com/befovis/Infa/blob/23aff2df63fd89d5a7130f5599a777da72c35f6e/im3.png](https://drive.google.com/file/d/1ZBNygLGN67lROtimOCbQoJVTznUNwvGZ/view?usp=sharing))
+![im3](https://github.com/befovis/Infa/blob/a17e7a29b0d245164f3df19b87c36d6aa64ea5cb/im3.png)
 
 С помощью скрипта `#!/bin/bash` указываем полный путь к оболочке. Прописываем команду echo для отображения строки текста.
 
-![im4]([https://github.com/befovis/Infa/blob/23aff2df63fd89d5a7130f5599a777da72c35f6e/im4.png](https://drive.google.com/file/d/15yL0y7jhUmfk27v8-0lPjR5F68D4sZCz/view?usp=sharing))
+![im4](https://github.com/befovis/Infa/blob/a17e7a29b0d245164f3df19b87c36d6aa64ea5cb/im4.png)
 Запускаем bash-скрипт, выполнив в терминале `bash script.bash`.
 
-![im5]([https://github.com/befovis/Infa/blob/23aff2df63fd89d5a7130f5599a777da72c35f6e/im5.png](https://drive.google.com/file/d/1OthgIJ8wFki8qOA1_Y0Kd2kstfzth5Ow/view?usp=sharing))
+![im5](https://github.com/befovis/Infa/blob/a17e7a29b0d245164f3df19b87c36d6aa64ea5cb/im5.png)
 Итог: в терминале выводится приветствие на заданное нами имя.
 
 **Вывод:** я научилась работать в операционной системе Linux Ubuntu, а также пользоваться терминалом.  Узнала о некоторых горячих клавишах  и командах для работы с терминалом.
