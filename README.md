@@ -5,7 +5,7 @@
 ### Санкт-Петербург 2024 г.
 
 
-**Задание:** Модифицировать файл script.bash так, чтобы при его запуске в терминале в виде bash script.bash Vasya Pupkin Вывод был Welcome, Vasya Pupkin
+**Задание:** Модифицировать файл script.bash так, чтобы при его запуске в терминале в виде `bash script.bash Vasya Pupkin` Вывод был `Welcome, Vasya Pupkin`
 
 
 Открываем терминал с помощью горячих клавиш Cntr Alt T.
@@ -13,16 +13,16 @@
 
 В терминале пишем команду touch для создания файла с названием будущего файла script.bash.
 
-Следующим шагом устанавливаем команду '''gedit''' с помощью команды sudo apt install gedit.
+Следующим шагом устанавливаем команду `gedit` с помощью команды `sudo apt install gedit`.
 ![im12](https://github.com/befovis/Infa/blob/main/im2.png)
 
 Теперь используя команду gedit открываем нужный файл для редактирования.
 ![im3](https://github.com/befovis/Infa/blob/23aff2df63fd89d5a7130f5599a777da72c35f6e/im3.png)
 
-С помощью скрипта #!/bin/bash указываем полный путь к оболочке. Прописываем команду echo для отображения строки текста.
+С помощью скрипта `#!/bin/bash` указываем полный путь к оболочке. Прописываем команду echo для отображения строки текста.
 
 ![im4](https://github.com/befovis/Infa/blob/23aff2df63fd89d5a7130f5599a777da72c35f6e/im4.png)
-Запускаем bash-скрипт, выполнив в терминале bash script.bash.
+Запускаем bash-скрипт, выполнив в терминале `bash script.bash`.
 
 ![im5](https://github.com/befovis/Infa/blob/23aff2df63fd89d5a7130f5599a777da72c35f6e/im5.png)
 Итог: в терминале выводится приветствие на заданное нами имя.
