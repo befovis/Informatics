@@ -9,7 +9,7 @@
 
 
 Открываем терминал с помощью горячих клавиш Cntr Alt T.
-![im1]()
+![im1](https://github.com/befovis/Infa/blob/7853528f99ee93d156f1b35629e73b3c7bd3e355/im1.png)
 В терминале пишем команду touch для создания файла с названием будущего файла script.bash.
 
 
