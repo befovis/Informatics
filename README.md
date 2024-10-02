@@ -9,7 +9,7 @@
 ## Задание: Модифицировать файл script.bash так, чтобы при его запуске в терминале в виде `bash script.bash Vasya Pupkin` Вывод был `Welcome, Vasya Pupkin`
 
 
-Открываем терминал с помощью горячих клавиш Cntr Alt T.
+Открываем терминал с помощью горячих клавиш *Cntr Alt T*.
 ![im1](https://github.com/befovis/Infa/blob/2cd9e07f7f306b64f7144a10c64ae3d79a3c7ba5/im1.png)
 
 В терминале пишем команду touch для создания файла с названием будущего файла script.bash.
