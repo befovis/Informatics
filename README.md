@@ -74,7 +74,7 @@ ping -c 4 google.com
 ping -c 4 192.168.56.102
 ```
 
-![Доступ]()
+![Доступ](https://github.com/befovis/Informatics/blob/main/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-11-13%20011026.png)
 
 ### Проверка доступа с машины **МААА** в машину **МССC**
 
@@ -87,3 +87,7 @@ ping -c 4 192.168.56.103
 ### Запрещаем доступ с машины **МВВВ** в машину **МССС**
 
 ![Доступ]()
+
+Проверяем недоступность с машины **МССС**
+
+![Доступ](https://github.com/befovis/Informatics/blob/main/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-11-13%20011026.png)
