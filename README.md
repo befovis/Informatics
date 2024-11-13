@@ -17,18 +17,63 @@
 ## 2. Создаём виртуальных сетевых адаптеров:
    Переходим *Файл* > *Инструменты* > *Менеджер сетей*
 ![Настройки](https://github.com/befovis/Informatics/blob/main/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-11-12%20221936.png)
+
    Настраиваем два адптера, установавливаем флажок «Включить сервер», чтобы активировать встроенный DHCP-сервер:
+![Адаптеры](https://github.com/befovis/Informatics/blob/main/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-11-12%20222312.png)
 
 ## 3. Настраиваем сетевые параметры:
   **Настройка машины MAAA**
+![Адаптеры](https://github.com/befovis/Informatics/blob/main/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-11-13%20012033.png)
+![Адаптеры](https://github.com/befovis/Informatics/blob/main/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-11-13%20012038.png)
+![Адаптеры](https://github.com/befovis/Informatics/blob/main/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-11-13%20012043.png)
   
   **Настройка машины MBBB**
-  
+![Адаптеры](https://github.com/befovis/Informatics/blob/main/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-11-13%20012056.png)
+
+
   **Настройка машины MCCC**
+  ![Адаптеры](https://github.com/befovis/Informatics/blob/main/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-11-13%20012121.png)
+
 ## 4. Проверка работы сети и настройка недоступности машины MBBB в MCCC:
 
+Узнаем ip-адреса каждой машины
+```bash
+ip -br a
+```
+
+Машина **МAAA**
+![ip](https://github.com/befovis/Informatics/blob/main/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-11-13%20011902.png)
 
 
+Машина **МBBB**
+![ip](https://github.com/befovis/Informatics/blob/main/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-11-13%20011735.png)
 
 
-   
+Машина **МCCC**
+![ip](https://github.com/befovis/Informatics/blob/main/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-11-13%20011152.png)
+
+
+### Проверяем доступ машины **МААА** к Интернету
+```bash
+ping -c 4 google.com
+```
+![ip](https://github.com/befovis/Informatics/blob/main/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-11-13%20010814.png)
+
+### Проверка доступа с машины **МААА** в машину **МВВВ**
+
+```bash
+ping -c 4 192.168.56.102
+```
+
+![Доступ]()
+
+### Проверка доступа с машины **МААА** в машину **МССC**
+
+```bash
+ping -c 4 192.168.56.103
+```
+![Доступ]()
+
+### Запрещаем доступ с машины **МВВВ** в машину **МССС**
+
+![Доступ]()
