@@ -124,7 +124,7 @@ sudo docker rmi aafire_image:latest
 sudo docker network rm myNetwork 
 ```
 
-Для очистки всех неиспользуемых объектов: 
+Для очистки неиспользуемых объектов: 
 
 ```bash
 sudo docker system prune -a --volumes 
