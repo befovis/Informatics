@@ -115,7 +115,7 @@ sudo docker exec -it mycontainer1 ping mycontainer2
 
 ## Очистка ресурсов Docker
 
-Чтобы удалить и остановить созданные контейнеры, образы и сеть: 
+Чтобы  остановить и удалить созданные контейнеры, образы и сеть: 
 
 ```bash
 sudo docker stop mycontainer1 mycontainer2 
