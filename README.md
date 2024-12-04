@@ -27,7 +27,7 @@ docker network inspect myNetwork
 
 ## Создание Dockerfile
 
-Создадим файл `Dockerfile` со следующим содержимым:
+Создадим файл *Dockerfile* со следующим содержимым:
 
 ```dockerfile
 dockerfile 
@@ -77,7 +77,7 @@ sudo docker run -itd --name mycontainer2 aafire_image:latest
 - Контейнеры будут отображать aafire. 
 
 
-## Создание сети myNetwork
+## Создание сети *myNetwork*
 
 Создадим пользовательскую сеть Docker:
 
@@ -86,7 +86,7 @@ sudo docker network create myNetwork
 ```
 
 
-## Подключение контейнеров к сети myNetwork
+## Подключение контейнеров к сети *myNetwork*
 
 Подключим оба контейнера к созданной сети.
 
@@ -98,7 +98,7 @@ sudo docker network connect myNetwork mycontainer2
 
 ## Проверка соединения между контейнерами.
 
-Выполняем `ping` из первого контейнера во второй.
+Выполняем *ping* из первого контейнера во второй.
 
 ```bash
 sudo docker exec -it mycontainer1 ping mycontainer2 
