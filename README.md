@@ -22,3 +22,134 @@ docker network connect myNetwork mycontainer2
 docker network inspect myNetwork
 ```
 Далее вам нужно самостоятельно протестировать соединение между контейнерами утилитой ping и приложить скриншот.
+
+### Лабораторная:
+
+## Создание Dockerfile
+
+Создадим файл `Dockerfile` со следующим содержимым:
+
+```dockerfile
+dockerfile 
+FROM ubuntu:latest 
+ 
+# Установка необходимых пакетов 
+RUN apt-get update && \ 
+    apt-get install -y libaa-bin iputils-ping && \ 
+    apt-get clean && \ 
+    rm -rf /var/lib/apt/lists/* 
+ 
+# Запуск aafire с терминалом 
+CMD ["sh", "-c", "exec aafire </dev/tty && tail -f /dev/null"]
+```
+**Объяснение:** 
+- Используем официальный образ Ubuntu. 
+- Устанавливаем необходимые пакеты: libaa-bin (для aafire`) и `iputils-ping. 
+- Команда CMD запускает aafire с привязкой к терминалу. 
+
+ 
+## Сборка Docker-образа
+
+В терминале, находясь в директории с `Dockerfile`, выполним команду:
+
+```bash 
+sudo docker build -t aafire_image:latest . 
+```
+
+**Объяснение:**
+
+- `-t aafire_image:latest` задаёт имя и тег образа.
+- Точка `.` указывает на текущую директорию как контекст сборки.
+
+
+## Запуск двух контейнеров с `aafire`
+
+Запустим два контейнера в интерактивном режиме.
+
+```bash
+sudo docker run -itd --name mycontainer1 aafire_image:latest 
+sudo docker run -itd --name mycontainer2 aafire_image:latest 
+```
+
+**Объяснение:** 
+- -itd запускает контейнеры в интерактивном и фоновом режимах. 
+- Контейнеры будут отображать aafire. 
+
+
+## Создание сети `myNetwork`
+
+Создадим пользовательскую сеть Docker:
+
+```bash
+sudo docker network create myNetwork
+```
+
+
+## Подключение контейнеров к сети `myNetwork`
+
+Подключим оба контейнера к созданной сети.
+
+```bash 
+sudo docker network connect myNetwork mycontainer1 
+sudo docker network connect myNetwork mycontainer2 
+```
+
+
+## Проверка соединения между контейнерами.
+
+Выполняем `ping` из первого контейнера во второй
+
+```bash
+sudo docker exec -it mycontainer1 ping mycontainer2 
+```
+
+**Объяснение:**
+
+- `docker exec` позволяет выполнять команды внутри запущенного контейнера.
+- Мы пингуем `mycontainer2` по имени контейнера.
+
+**Ожидаемый результат:**
+
+![image]()
+
+
+## Очистка ресурсов Docker
+
+Чтобы удалить и остановить созданные контейнеры, образы и сеть: 
+
+```bash
+sudo docker stop mycontainer1 mycontainer2 
+sudo docker rm mycontainer1 mycontainer2 
+sudo docker rmi aafire_image:latest 
+sudo docker network rm myNetwork 
+```
+
+Для очистки всех неиспользуемых объектов: 
+
+```bash
+sudo docker system prune -a --volumes 
+```
+
+**Объяснение:**
+
+- `docker system prune -a --volumes` удаляет все неиспользуемые ресурсы.
+
+
+## Шаг 9: Отключение и включение Docker
+
+### Отключение Docker
+
+```bash
+sudo systemctl stop docker
+```
+
+### Включение Docker
+
+```bash
+sudo systemctl start docker
+```
+
+
+
+
+
