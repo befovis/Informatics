@@ -43,6 +43,7 @@ RUN apt-get update && \
 CMD ["sh", "-c", "exec aafire </dev/tty && tail -f /dev/null"]
 ```
 **Объяснение:** 
+
 - Используем официальный образ Ubuntu. 
 - Устанавливаем необходимые пакеты: libaa-bin (для aafire`) и `iputils-ping. 
 - Команда CMD запускает aafire с привязкой к терминалу. 
@@ -76,7 +77,7 @@ sudo docker run -itd --name mycontainer2 aafire_image:latest
 - Контейнеры будут отображать aafire. 
 
 
-## Создание сети `myNetwork`
+## Создание сети myNetwork
 
 Создадим пользовательскую сеть Docker:
 
@@ -85,7 +86,7 @@ sudo docker network create myNetwork
 ```
 
 
-## Подключение контейнеров к сети `myNetwork`
+## Подключение контейнеров к сети myNetwork
 
 Подключим оба контейнера к созданной сети.
 
