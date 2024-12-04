@@ -97,7 +97,7 @@ sudo docker network connect myNetwork mycontainer2
 
 ## Проверка соединения между контейнерами.
 
-Выполняем `ping` из первого контейнера во второй
+Выполняем `ping` из первого контейнера во второй.
 
 ```bash
 sudo docker exec -it mycontainer1 ping mycontainer2 
