@@ -25,28 +25,4 @@
 | 60                | 11               | 0.000085                   |
 | 80                | 13               | 0.000110                   |
 
-## Графики результатов
-
-### График 1: Время выполнения неориентированного графа
-
-```
-plt.plot(vertices_undirected, times_undirected, label="Undirected Graph")
-plt.xlabel('Количество вершин')
-plt.ylabel('Время выполнения (секунды)')
-plt.title('Время выполнения для неориентированных графов')
-plt.legend()
-plt.show()
-```
-
-### График 2: Время выполнения ориентированного графа
-
-```
-plt.plot(vertices_directed, times_directed, label="Directed Graph")
-plt.xlabel('Количество вершин')
-plt.ylabel('Время выполнения (секунды)')
-plt.title('Время выполнения для ориентированных графов')
-plt.legend()
-plt.show()
-```
-
 
